@@ -48,6 +48,7 @@ func NmapScan(expectedList []Host) {
 	scanner, err := nmap.NewScanner(
 		nmap.WithTargets(targets...),
 		nmap.WithContext(ctx),
+		nmap.WithConnectScan(),
 	)
 	check(err)
 

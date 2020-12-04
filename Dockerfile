@@ -20,8 +20,11 @@ RUN mkdir -p /app && \
     apt-get autoremove -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Change working directory
+WORKDIR /app
+
 # Copy built binary from first step
-COPY --from=builder /tmp/build/prometheus-nmap-exporter /app/
+COPY --from=builder /tmp/build/prometheus-nmap-exporter ./
 
 # Docker settings
 EXPOSE     8080

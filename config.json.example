@@ -1,0 +1,14 @@
+[
+    {
+        "name": "iamlookingfor.work",
+        "ports": [
+            "22/tcp", "443/tcp"
+        ]
+    },
+    {
+        "name": "incorrect.domain.tld.whatever",
+        "ports": [
+            "22/tcp", "443/tcp"
+        ]
+    }
+]
